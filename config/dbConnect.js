@@ -3,10 +3,10 @@ require("dotenv").config({ path: "./config.env" });
 
 const dbConnect = () => {
 
-  const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://hrirbno:OcfOgUqm3dxbWuca@cluster0.mongodb.net/TaskManager?retryWrites=true&w=majority";
+  const MONGODB_URL = process.env.MONGODB_URL;
 
 
-  mongoose.connect("mongodb+srv://hrirbno:OcfOgUqm3dxbWuca@cluster0.cybsp6u.mongodb.net/TaskManager", {
+  mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true, 
   }).then(() => {
