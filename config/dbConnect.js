@@ -10,9 +10,9 @@ const dbConnect = () => {
     useNewUrlParser: true,
     useUnifiedTopology: true, 
   }).then(() => {
-    console.log("database connection successfull !!!");
+    console.log("database connection successfull ");
   }).catch((err) => {
-    console.log(`error while connecting database ${err}`);
+    console.log(`error while connecting database !!! ${err}`);
   });
 };
 
